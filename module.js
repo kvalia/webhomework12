@@ -11,7 +11,9 @@ exp.use(bodyParser.urlencoded({ extended: true }));
 
 // Handle post request when information is submitted
 exp.post('/app', async (req, res) => {
-	res.send("<h2>Form was successfully received</h2>");
+	var data = [];
+	console.log(data);
+	res.send(data);
 });
 
 // Function to get information based on choice and data inputted
