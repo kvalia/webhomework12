@@ -23,7 +23,8 @@ exp.post('/', async (req, res) => {
 	})
   // Show resultss
 	console.log(data);
- 	res.send(data);
+//  	res.send(data);
+	res.sent("<h1>Hello</h1>")
 });
 
 // Function to get information based on choice and data inputted
