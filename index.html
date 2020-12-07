@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Stock Ticker App</title>
+</head>
+<body>
+<h1>Stock Ticker Mapping App</h1>
+<p>Please enter either a company name or ticker which will be searched for in the database.</p>
+<form action="https://wphomework12.herokuapp.com/app" method="POST">
+	Search by company or ticker? <br />
+	<input type="radio" id="company" name="choice" value="company">
+		<label for="company">Company</label><br>
+		<input type="radio" id="ticker" name="choice" value="ticker">
+	<label for="stock">Stock</label><br>
+	<label for="value">Enter company name or stock ticker.</label><br>
+ 	<input type="text" id="val" name="val"><br>
+ 	<input type="submit" value="Submit">
+</form>
+</html>
