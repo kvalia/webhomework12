@@ -11,20 +11,7 @@ exp.use(bodyParser.urlencoded({ extended: true }));
 
 // Handle post request when information is submitted
 exp.post('/app', async (req, res) => {
-	var data = [];
-  // Get info from request
-	await get_ct(req.body.choice, req.body.val).then(info => {
-		info.forEach(company => {
-			data.push({
-				"company": company.company,
-				"ticker": company.ticker
-			});
-		})
-	})
-  // Show resultss
-	console.log(data);
-//  	res.send(data);
-	res.send("Form was successfully received");
+	res.send("<h2>Form was successfully received</h2>");
 });
 
 // Function to get information based on choice and data inputted
