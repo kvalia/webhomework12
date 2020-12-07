@@ -10,7 +10,7 @@ client = new MongoClient(url,{ useUnifiedTopology: true });
 exp.use(bodyParser.urlencoded({ extended: true })); 
 
 // Handle post request when information is submitted
-exp.post('/app', async (req, res) => {
+exp.post('/', async (req, res) => {
 	var data = [];
   // Get info from request
 	await get_ct(req.body.choice, req.body.val).then(info => {
