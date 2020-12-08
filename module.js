@@ -12,8 +12,15 @@ exp.use(bodyParser.urlencoded({ extended: true }));
 // Handle post request when information is submitted
 exp.post('/app', async (req, res) => {
 	var data = [];
-	console.log(data);
-	res.send(data);
+	try {
+    // Connect to the database and get collection
+    await client.connect();
+    var dbo = client.db("companies-db");
+    var coll = dbo.collection("companies");
+    var query = {};
+    query[choice] = name;
+	db.close();
+	res.send(req.body.val);
 });
 
 // Function to get information based on choice and data inputted
